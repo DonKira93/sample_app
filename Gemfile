@@ -28,6 +28,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Unicorn as the app server
 # gem 'unicorn'
+group :test do
+  gem 'selenium-webdriver', '2.35.1'
+  gem 'capybara', '2.1.0'
+end
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -47,4 +51,10 @@ end
 
 group :development, :test do
   gem 'rspec-rails'
+end
+
+group :production do
+  gem 'pg', '0.15.1'
+
+  gem 'rails_12factor', '0.0.2'
 end
